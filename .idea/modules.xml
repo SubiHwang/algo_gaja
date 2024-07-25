@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/algo_gaja.iml" filepath="$PROJECT_DIR$/.idea/algo_gaja.iml" />
-      <module fileurl="file://$PROJECT_DIR$/boj-1038/boj-1038.iml" filepath="$PROJECT_DIR$/boj-1038/boj-1038.iml" />
-      <module fileurl="file://$PROJECT_DIR$/boj-12869/boj-12869.iml" filepath="$PROJECT_DIR$/boj-12869/boj-12869.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boj-1303/boj-1303.iml" filepath="$PROJECT_DIR$/boj-1303/boj-1303.iml" />
       <module fileurl="file://$PROJECT_DIR$/boj-1405/boj-1405.iml" filepath="$PROJECT_DIR$/boj-1405/boj-1405.iml" />
       <module fileurl="file://$PROJECT_DIR$/boj-14620/boj-14620.iml" filepath="$PROJECT_DIR$/boj-14620/boj-14620.iml" />
       <module fileurl="file://$PROJECT_DIR$/boj-18111/boj-18111.iml" filepath="$PROJECT_DIR$/boj-18111/boj-18111.iml" />
