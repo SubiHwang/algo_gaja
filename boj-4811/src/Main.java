@@ -20,6 +20,13 @@ public class Main {
 		//메모이제이션 : 항상 동일한 결과를 도출한다면 한 번만 구하도록 한다.
 		getDaughterText();
 
+		for (int i = 0; i <= MAX_P; i++) {
+			for (int j = 0; j <= MAX_P; j++) {
+				System.out.print(dp[i][j] + " ");
+			}
+			System.out.println();
+		}
+
 
 		while (true) {
 
