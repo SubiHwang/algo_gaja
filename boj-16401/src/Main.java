@@ -69,7 +69,7 @@ public class Main {
 
 			} //while end
 
-			System.out.println(right);
+			System.out.println(max);
 
 		}
 
