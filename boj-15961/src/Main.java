@@ -21,37 +21,55 @@ public class Main {
 		}
 
 		for (int i = N; i < sushi.length; i++) {
-			sushi[i] = sushi[i % N];//8번째에 0번, 9번째에 1
+			sushi[i] = sushi[i % N]; // 초밥 배열을 원형으로 만든다.
 		}
 
-		int start = 0;
-		int end = start + k;
-		int max = 0;
+		int[] window = new int[d + 1]; // 각 초밥 유형의 수
 
-		while (end <= sushi.length - 1) {
+		int cnt = 0;
 
-			int[] window = new int[d + 1]; //인덱스는 초밥의 유형, 값은 해당 유형의 초밥 수
-			window[coupon] = 1;
+		// 초기 윈도우 설정
+		for (int i = 0; i < k; i++) {
+			if (window[sushi[i]] == 0) {
+				cnt++; //유형 수를 증가시킨후에 window에 넣어준다.
+			}
+			window[sushi[i]]++;
+		}
 
-			for (int i = start; i < end; i++) {
-				window[sushi[i]]++; //이 윈도우에 해당 유형의 초밥 수가 계산된다.
+		if (window[coupon] == 0) {
+			cnt++;
+		}
+		window[coupon]++;
+		//초기 설정 end
+
+		int max = cnt; // 초기 최대값 설정
+
+		// 슬라이딩 윈도우
+		int start = 1, end = 1;
+
+		while (end < sushi.length) {
+
+			end = start + k;
+
+			// 윈도우에서 나가는 초밥
+			int out = sushi[start - 1];
+			window[out]--;
+			if (window[out] == 0) { // 나가는 초밥으로 인해 초밥의 수가 0이 되는 유형이 있다면
+				cnt--; // 유형 수를 감소시킨다.
 			}
 
-
-			int cnt = 0;
-			for (int i = 0; i < window.length; i++) {
-				if (window[i] != 0) {
-					cnt++;
-				}
+			// 윈도우로 들어오는 초밥
+			int in = sushi[end - 1]; //end 까지 배열로 들어온다.
+			if (window[in] == 0) {
+				cnt++;
 			}
+			window[in]++;
 
 			max = Math.max(max, cnt);
 
 			start++;
-			end++;
 		}
 
 		System.out.println(max);
-
 	}
 }
