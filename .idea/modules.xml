@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KoreanMelon/KoreanMelon.iml" filepath="$PROJECT_DIR$/KoreanMelon/KoreanMelon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/algo_gaja.iml" filepath="$PROJECT_DIR$/.idea/algo_gaja.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boj-11052/boj-11052.iml" filepath="$PROJECT_DIR$/boj-11052/boj-11052.iml" />
       <module fileurl="file://$PROJECT_DIR$/boj-12869/boj-12869.iml" filepath="$PROJECT_DIR$/boj-12869/boj-12869.iml" />
       <module fileurl="file://$PROJECT_DIR$/boj-1303/boj-1303.iml" filepath="$PROJECT_DIR$/boj-1303/boj-1303.iml" />
       <module fileurl="file://$PROJECT_DIR$/boj-13702/boj-13702.iml" filepath="$PROJECT_DIR$/boj-13702/boj-13702.iml" />
