@@ -39,7 +39,7 @@ public class Main {
 		roadNum = Integer.parseInt(st.nextToken());
 
 		A = new ArrayList[buildingNum + 1];
-		check = new boolean[buildingNum + 1];
+		//check = new boolean[buildingNum + 1];
 
 		for (int i = 1; i <= buildingNum; i++) {
 			A[i] = new ArrayList<>();
@@ -55,23 +55,33 @@ public class Main {
 			totalCost += cost;
 		}
 
+		int ans = 0;
+
 		for (int i = 1; i <= buildingNum; i++) {
+			installCost = 0;
+			check = new boolean[buildingNum + 1];
 			queue.add(new Building(i, 0));
 			getRoute();
+
+			if (getRoute() == -1) {
+				ans = -1;
+				//System.out.println(-1);
+			} else {
+				int saveCost = totalCost - installCost;
+				ans = Math.max(ans, saveCost);
+				//System.out.println(saveCost);
+			}
+
 		}
 
-		if (getRoute() == -1) {
-			System.out.println(-1);
-		} else {
-			int saveCost = totalCost - installCost;
-			System.out.println(saveCost);
-		}
+		System.out.println(ans);
+
 
 	}
 
 	private static int getRoute() { //가장 최단 비용 도출
 
-		queue.add(new Building(1, 0));
+		//queue.add(new Building(1, 0));
 
 		while (!queue.isEmpty()) {
 			Building building = queue.poll();
