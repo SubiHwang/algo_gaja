@@ -81,7 +81,7 @@ public class Main {
 				ans += t * (cnt - 2);
 			}
 
-			for (City c : A[city.to]) {
+			for (City c : A[city.to]) { //인접한 모든 인접 도시를 탐색한다.
 				if (!check[c.to]) {
 					queue.add(c);
 				}

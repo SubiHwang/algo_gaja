@@ -23,17 +23,18 @@ public class Main {
 		Arrays.fill(dp, 1);
 		Arrays.fill(dpp, 1);
 
-		//dp[n] = n번 자리에서 가장 긴 증가하는 수열의 길이
 		int max = 0;
-		for (int i = 1; i <= N; i++) {
-			for (int j = 1; j < i - 1; j++) {
-				if (arr[i] < arr[j]) {
-					dp[i] = Math.max(dp[i], dp[j]);
-				} else {
-					dp[i] = Math.max(dp[i], dp[j] + 1);
-				}
+		for (int i = 2; i <= N; i++) {
+			if (arr[i] >= arr[i - 1]) {
+				dp[i] = dp[i - 1] + 1;
 			}
 			max = Math.max(max, dp[i]);
+		}
+
+		for (int i = 2; i <= N; i++) {
+			if (arr[i] <= arr[i - 1]) {
+				dpp[i] = dpp[i - 1] + 1;
+			}
 			max = Math.max(max, dpp[i]);
 		}
 
