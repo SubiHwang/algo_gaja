@@ -33,8 +33,8 @@ public class Main {
 			//presize == 1로 하면 분할된 블록의 크기가 1인 경우 나누지 않겠다는 뜻이된다.
 			return map[row][col];
 		}
-
 		int preSize = size / 2;
+
 
 		int[] nums = new int[4];
 		nums[0] = dfs(row, col, preSize);
