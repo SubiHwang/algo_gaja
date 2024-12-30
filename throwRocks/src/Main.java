@@ -46,7 +46,7 @@ public class Main {
 				}
 			}
 
-			System.out.println("#" + test + " " + max);
+			System.out.println(test + " " + max);
 		}
 	}
 }
