@@ -39,7 +39,7 @@ public class Main {
 		e = Integer.parseInt(st.nextToken());
 
 		A = new ArrayList[N + 1];
-		visited = new int[N + 1];
+		visited = new int[N + 1]; ;
 
 		for (int i = 1; i <= N; i++) {
 			A[i] = new ArrayList<>();
