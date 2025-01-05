@@ -23,8 +23,7 @@ public class Main {
 			return dp[n][k] = 1;
 		}
 		if (dp[n][k] != 0) {
-			return dp[n][k];
-		}
+			return dp[n][k
 
 		return dp[n][k] = (Combination(n - 1, k - 1) + Combination(n - 1, k)) % 10007;
 
