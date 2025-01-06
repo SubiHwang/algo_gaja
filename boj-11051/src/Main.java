@@ -15,7 +15,7 @@ public class Main {
 
 		dp = new int[n + 1][n + 1]; //조합은 1부터로
 
-		System.out.println(Combination(n, k));
+		System.out.println(Combinatio(n, k));
 	}
 
 	private static int Combination(int n, int k) {
