@@ -12,7 +12,7 @@ class Node implements Comparable<Node> {
 	public Node(int x, int y, int cnt) {
 		this.x = x;
 		this.y = y;
-		this.cnt = cnt;
+		this.cnt = 
 	}
 
 	@Override
