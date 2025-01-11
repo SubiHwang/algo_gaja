@@ -30,6 +30,6 @@ public class Main {
 		}
 		max = Math.max(pre * first, max);
 		sum += pre * first;
-		System.out.println((sum - max * 2) * K);
+		System.out.println((sum - max * 2) );
 	}
 }

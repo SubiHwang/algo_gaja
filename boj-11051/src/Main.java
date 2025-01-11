@@ -15,7 +15,7 @@ public class Main {
 
 		dp = new int[n + 1][n + 1]; //조합은 1부터로
 
-		System.out.println(Combination(n, k));
+		System.out.println(Combinatio(n, k));
 	}
 
 	private static int Combination(int n, int k) {
@@ -23,8 +23,7 @@ public class Main {
 			return dp[n][k] = 1;
 		}
 		if (dp[n][k] != 0) {
-			return dp[n][k];
-		}
+			return dp[n][k
 
 		return dp[n][k] = (Combination(n - 1, k - 1) + Combination(n - 1, k)) % 10007;
 
